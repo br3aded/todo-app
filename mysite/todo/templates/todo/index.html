@@ -1,0 +1,23 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'todo/style.css' %}">
+
+{% if task_list %}
+    <ul>
+        <table>
+            <tr>
+                <th> Task Name </th>
+                <th> Task Description </th>
+                <th> Completion </th>
+            </tr>
+            {% for task in task_list %}
+                <tr>
+                    <th> {{task.task_name}} </th>
+                    <th> {{task.description}}</th>
+                    <th> {{task.completion}}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </ul>
+{% else %}
+    <p> No tasks are avaiable.</p>
+{% endif %}
