@@ -1,9 +1,10 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'todo/style.css' %}">
 
+<header> TO-DO List </header>
 {% if task_list %}
     <ul>
-        <table>
+        <table class="center">
             <tr>
                 <th> Task Name </th>
                 <th> Task Description </th>
@@ -13,7 +14,7 @@
                 <tr>
                     <th> {{task.task_name}} </th>
                     <th> {{task.description}}</th>
-                    <th> {{task.completion}}</th>
+                    <th><a href="delete/{{task.id}}">delete</a> </th>
                 </tr>
             {% endfor %}
         </table>
@@ -21,3 +22,5 @@
 {% else %}
     <p> No tasks are avaiable.</p>
 {% endif %}
+
+<button type="button">Add Task</button>

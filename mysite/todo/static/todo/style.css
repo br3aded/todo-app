@@ -1,3 +1,25 @@
 th, tr {
     padding: 15px;
+    caret-color: transparent;
   }
+
+.center {
+    margin-left: 400;
+    margin-top: 40;
+}
+
+header {
+    display: block;
+    margin-left: 650;
+    font-size: xx-large;
+    caret-color: transparent;
+  }
+
+body {
+    background-color: green;
+  }
+
+button{
+    margin-left: 720;
+    caret-color: transparent;
+}
